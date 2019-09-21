@@ -1,0 +1,117 @@
+guiTypes = {
+	containerWindowType = {
+		name = "coal_container"
+		position = { x = -4 y = 0 }
+
+		iconType = {
+			name = "coal_alignment_box"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 177 y = 5 }
+			Orientation = "UPPER_LEFT"
+			tooltip = "COAL_TOOLTIP"
+		}
+		instantTextBoxType = {
+			name ="coalpop"
+			position = { x = 213 y = 8 }
+			font = "hoi_18mbs"
+			text = "[?total_coal_pop]%"
+			format = left
+			maxWidth = 52
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "COAL_TOOLTIP"
+		}
+	}
+	containerWindowType = {
+		name = "highlight_communist"
+		position = { x = 193 y = 150 }
+		clipping = no
+		iconType = {
+			name = "highlight_icon"
+			spriteType = "GFX_pol_party_alignment_highlight"
+			position = { x = -19 y = -3 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	containerWindowType = {
+		name = "highlight_fascist"
+		position = { x = 193 y = 165 }
+		clipping = no
+		iconType = {
+			name = "highlight_icon"
+			spriteType = "GFX_pol_party_alignment_highlight"
+			position = { x = -19 y = -3 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	containerWindowType = {
+		name = "highlight_democratic"
+		position = { x = 193 y = 180 }
+		clipping = no
+		iconType = {
+			name = "highlight_icon"
+			spriteType = "GFX_pol_party_alignment_highlight"
+			position = { x = -19 y = -3 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	containerWindowType = {
+		name = "highlight_neutrality"
+		position = { x = 193 y = 180 }
+		clipping = no
+		iconType = {
+			name = "highlight_icon"
+			spriteType = "GFX_pol_party_alignment_highlight"
+			position = { x = -19 y = -3 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	containerWindowType = {
+		name = "communist_icon"
+		position = { x = 0 y = 0 }
+		clipping = no
+		iconType = {
+			name = "communist_ideology_icon"
+			spriteType = "GFX_ideology_communist_group"
+			position = { x = 177 y = 7 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.35
+		}
+	}
+	containerWindowType = {
+		name = "fascist_icon"
+		position = { x = 0 y = 0 }
+		clipping = no
+		iconType = {
+			name = "fascist_ideology_icon"
+			spriteType = "GFX_ideology_fascist_group"
+			position = { x = 177 y = 7 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.35
+		}
+	}
+	containerWindowType = {
+		name = "democratic_icon"
+		position = { x = 0 y = 0 }
+		clipping = no
+		iconType = {
+			name = "democratic_ideology_icon"
+			spriteType = "GFX_ideology_democratic_group"
+			position = { x = 177 y = 7 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.35
+		}
+	}
+	containerWindowType = {
+		name = "neutrality_icon"
+		position = { x = 0 y = 0 }
+		clipping = no
+		iconType = {
+			name = "neutrality_ideology_icon"
+			spriteType = "GFX_ideology_neutrality_group"
+			position = { x = 177 y = 7 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.35
+		}
+	}
+}

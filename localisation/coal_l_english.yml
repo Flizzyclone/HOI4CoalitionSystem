@@ -1,0 +1,10 @@
+﻿l_english:
+ #Coalition GUI
+ COAL_TOOLTIP:0 "[This.is_there_coal_loc]\nOur current ruling party is the §Y[ROOT.GetRulingParty]"
+ is_coalition:0 "Our current coalition is made up of §Y[?ROOT.coal_list^num]§  §Wparties with a combined popularity of §Y[?ROOT.total_coal_pop]% \n§WThe parties in our coalition are[This.is_communist][This.is_fascist][This.is_democratic][This.is_neutrality]"
+ no_coalition:0 "We currently have no coalition in government"
+ auth_soc_yes:0 "\nCommunist §Y[?party_popularity@communist|%0]§W"
+ rad_soc_yes:0 "\nFascist §Y[?party_popularity@fascist|%0]§W"
+ dem_soc_yes:0 "\nDemocratic §Y[?party_popularity@democratic|%0]§W"
+ soc_dem_yes:0 "\nNeutral §Y[?party_popularity@neutrality|%0]§W"
+ not_in_coal:0 ""

@@ -1,0 +1,90 @@
+scripted_gui = {
+	coal_container = {
+		context_type = player_context
+
+		window_name = "coal_container"
+
+		parent_window_token = top_bar
+
+		visible = {
+			always = yes
+		}
+	}
+	coal_highlight_communist = {
+		window_name = "highlight_len_soc"
+		context_type = player
+		parent_window_token = politics_tab
+		visible = {
+			is_in_array = {
+				array = coal_list
+				value = 1
+			}
+		}
+	}
+	coal_highlight_fascist = {
+		window_name = "highlight_lib_soc"
+		context_type = player
+		parent_window_token = politics_tab
+		visible = {
+			is_in_array = {
+				array = coal_list
+				value = 2
+			}
+			
+		}
+	}
+	coal_highlight_democratic = {
+		window_name = "highlight_democratic"
+		context_type = player
+		parent_window_token = politics_tab
+		visible = {
+			is_in_array = {
+				array = coal_list
+				value = 3
+			}
+		}
+	}
+	coal_highlight_neutrality = {
+		window_name = "highlight_neutrality"
+		context_type = player
+		parent_window_token = politics_tab
+		visible = {
+			is_in_array = {
+				array = coal_list
+				value = 4
+			}
+		}
+	}
+	coal_communist_ideology_icon = {
+		window_name = "communist_icon"
+		context_type = player
+		parent_window_token = top_bar
+		visible = {
+			has_government = leninist_socialist
+		}
+	}
+	coal_fascist_ideology_icon = {
+		window_name = "fas_icon"
+		context_type = player
+		parent_window_token = top_bar
+		visible = {
+			has_government = fascist
+		}
+	}
+	coal_democratic_ideology_icon = {
+		window_name = "democratic_icon"
+		context_type = player
+		parent_window_token = top_bar
+		visible = {
+			has_government = democratic
+		}
+	}
+	coal_neutrality_ideology_icon = {
+		window_name = "neutrality_icon"
+		context_type = player
+		parent_window_token = top_bar
+		visible = {
+			has_government = neutrality
+		}
+	}
+}

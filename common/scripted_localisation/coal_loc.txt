@@ -1,0 +1,74 @@
+defined_text = {
+	name = is_there_coal_loc
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { coal_list^num > 1 }
+			}
+		}
+		localization_key = is_coalition
+	}
+	text = {
+		localization_key = no_coalition
+	}
+}
+defined_text = {
+	name = is_communist
+	text = {
+		trigger = {
+			is_in_array = {
+				array = coal_list
+				value = 1
+			}
+		}
+		localization_key = communist_yes
+	}
+	text = {
+		localization_key = not_in_coal
+	}
+}
+defined_text = {
+	name = is_fascist
+	text = {
+		trigger = {
+			is_in_array = {
+				array = coal_list
+				value = 2
+			}
+		}
+		localization_key = fascist_yes
+	}
+	text = {
+		localization_key = not_in_coal
+	}
+}
+defined_text = {
+	name = is_democratic
+	text = {
+		trigger = {
+			is_in_array = {
+				array = coal_list
+				value = 3
+			}
+		}
+		localization_key = democratic_yes
+	}
+	text = {
+		localization_key = not_in_coal
+	}
+}
+defined_text = {
+	name = is_neutrality
+	text = {
+		trigger = {
+			is_in_array = {
+				array = coal_list
+				value = 4
+			}
+		}
+		localization_key = neutrality_yes
+	}
+	text = {
+		localization_key = not_in_coal
+	}
+}

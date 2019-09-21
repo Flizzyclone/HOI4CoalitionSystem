@@ -1,0 +1,244 @@
+####Coalition system by Flizzy####
+
+
+coal_set_up = {
+	if = {
+		limit = {
+			has_government = communist
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		add_to_array = {
+			array = coal_list
+			value = 1
+		}
+		coal_calc_total = yes
+	}
+	else_if = {
+		limit = {
+			has_government = fascist
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		add_to_array = {
+			array = coal_list
+			value = 2
+		}
+		coal_calc_total = yes
+	}
+	else_if = {
+		limit = {
+			has_government = democratic
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		add_to_array = {
+			array = coal_list
+			value = 3
+		}
+		coal_calc_total = yes
+	}
+	else_if = {
+		limit = {
+			has_government = neutrality
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		add_to_array = {
+			array = coal_list
+			value = 4
+		}
+		coal_calc_total = yes
+	}
+}
+coal_add_communist = {
+	if = {
+		limit = {
+			NOT = {
+				is_in_array = {
+					array = coal_list
+					value = 1
+				}
+			}
+		}
+		add_to_array = {
+			array = coal_list
+			value = 1
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		coal_calc_total = yes
+	}
+}
+coal_add_fascist = {
+	if = {
+		limit = {
+			NOT = {
+				is_in_array = {
+					array = coal_list
+					value = 2
+				}
+			}
+		}
+		add_to_array = {
+			array = coal_list
+			value = 2
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		coal_calc_total = yes
+	}
+}
+coal_add_democratic = {
+	if = {
+		limit = {
+			NOT = {
+				is_in_array = {
+					array = coal_list
+					value = 3
+				}
+			}
+		}
+		add_to_array = {
+			array = coal_list
+			value = 3
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		coal_calc_total = yes
+	}
+}
+coal_add_neutrality = {
+	if = {
+		limit = {
+			NOT = {
+				is_in_array = {
+					array = coal_list
+					value = 4
+				}
+			}
+		}
+		add_to_array = {
+			array = coal_list
+			value = 4
+		}
+		add_to_variable = { var = party_in_coal value = 1 }
+		coal_calc_total = yes
+	}
+}
+coal_calc_total = {
+	set_variable = {
+		var = total_coal_pop
+		value = 0
+	}
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 1
+			}
+		}
+		add_to_variable = {
+			var = total_coal_pop
+			value = party_popularity@communist
+		}
+	}
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 2
+			}
+		}
+		add_to_variable = {
+			var = total_coal_pop
+			value = party_popularity@fascist
+		}
+	}
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 3
+			}
+		}
+		add_to_variable = {
+			var = total_coal_pop
+			value = party_popularity@democratic
+		}
+	}
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 4
+			}
+		}
+		add_to_variable = {
+			var = total_coal_pop
+			value = party_popularity@neutrality
+		}
+	}
+	multiply_variable = {
+		var = total_coal_pop
+		value = 100
+	}
+	round_variable = total_coal_pop
+}
+coal_rev_communist = {
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 1
+			}
+		}
+		remove_from_array = {
+			array = coal_list
+			value = 1
+		}
+		coal_calc_total = yes
+	}
+}
+coal_rev_fascist = {
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 2
+			}
+		}
+		remove_from_array = {
+			array = coal_list
+			value = 2
+		}
+		coal_calc_total = yes
+	}
+}
+coal_rev_democratic = {
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 3
+			}
+		}
+		remove_from_array = {
+			array = coal_list
+			value = 3
+		}
+		coal_calc_total = yes
+	}
+}
+coal_rev_neutrality = {
+	if = {
+		limit = {
+			is_in_array = {
+				array = coal_list
+				value = 4
+			}
+		}
+		remove_from_array = {
+			array = coal_list
+			value = 4
+		}
+		coal_calc_total = yes
+	}
+}
+coal_rev_all = {
+	clear_array = coal_list
+	coal_set_up = yes
+}
